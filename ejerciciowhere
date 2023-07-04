@@ -1,0 +1,59 @@
+1-Obtener todos los empleados que trabajan en la ciudad de 'Seattle'
+
+SELECT first_name, last_name, city FROM employees 
+WHERE city = "seattle"
+
+2-Obtener todos los pedidos realizados por el cliente que tengan el tipo de pago 'Credit Card'
+
+SELECT customer_id, payment_type FROM orders
+WHERE payment_type = "Credit Card"
+ORDER BY customer_id 
+
+3-Obtener todos los productos donde el precio sea menor a 10.000
+
+SELECT standard_cost FROM products
+WHERE standard_cost < 10.000
+
+4- Obtener al empleado que vive en la direccion '123 4th Avenue'
+
+SELECT first_name, last_name, address FROM employees
+WHERE address = "123 4th Avenue"
+
+5- Obener al empleado que tenga el cargo de 'Vice President, Sales'
+
+SELECT first_name, last_name, job_title FROM employees
+WHERE job_title = "Vice President, Sales"
+
+Base de datos Sakila
+
+1- Muestra todos los actores cuyo apellido sea "Smith".
+
+SELECT last_name FROM actor
+WHERE last_name = "Smith"
+
+2- Muestra todas las películas cuya duración sea superior a 120 minutos.
+
+SELECT title, length from film
+WHERE length > 120
+
+3-Muestra todas las películas clasificadas como "PG-13".
+
+SELECT title, rating FROM film
+WHERE rating = "PG-13"
+
+4-Muestra todas las tiendas ubicadas en la ciudad con ID 300.
+
+SELECT store_id, address_id from store
+WHERE address_id = "300"
+
+5- Muestra todos los pagos realizados por el cliente con ID 5.
+
+SELECT payment_id, customer_id FROM payment
+WHERE customer_id = 5
+
+6-Muestra todas las películas cuyo año de lanzamiento sea posterior a 2010.
+
+SELECT title, release_year FROM film
+WHERE release_year > 2010
+
+
