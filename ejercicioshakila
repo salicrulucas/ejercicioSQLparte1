@@ -1,0 +1,66 @@
+Ejercicios varios  BD-SAKILA
+
+1-Actores que tienen de primer nombre ‘Scarlett’.
+
+SELECT first_name last_name FROM actor
+WHERE first_name = "Scarlett"
+
+2-Actores que tienen de apellido ‘Johansson’.
+
+SELECT last_name FROM actor
+WHERE last_name = "Johansson"
+
+3. Actores que contengan una ‘O’ en su nombre.
+
+SELECT first_name FROM actor
+WHERE first_name LIKE "%o%"
+
+4. Actores que contengan una ‘O’ en su nombre y en una ‘A’ en su apellido.
+
+SELECT first_name, last_name FROM actor
+WHERE first_name LIKE "%o%" and last_name LIKE "%a%"
+
+5. Actores que contengan dos ‘O’ en su nombre y en una ‘A’ en su apellido.
+
+SELECT first_name, last_name FROM actor
+WHERE first_name LIKE "%o%" "%o%" and last_name LIKE "%a%"
+
+6. Actores donde su tercera letra sea ‘B’.
+
+SELECT first_name FROM actor
+WHERE first_name LIKE "__b%"
+
+7. Ciudades que empiezan por ‘a’.
+
+SELECT city FROM city
+WHERE city LIKE "%a"
+
+8. Ciudades que acaban por ‘s’.
+
+SELECT city FROM city
+WHERE city LIKE "%s"
+
+9. Ciudades del country 61.
+
+SELECT country_id FROM city
+WHERE country_id like "61"
+
+10. Películas con una duración entre 80 y 100.
+
+SELECT title, length FROM film
+WHERE length BETWEEN 80 and 100
+
+11 -Peliculas con un rental_rate entre 1 y 3.
+
+SELECT title, rental_rate FROM film
+WHERE rental_rate BETWEEN 1 and 3
+
+12. Peliculas con un rating de PG o G.
+
+SELECT title, rating FROM film
+WHERE rating like "PG" OR "G"
+
+13. Peliculas con un rating PG y duracion de más de 120.
+
+SELECT title, rating, length FROM film
+WHERE rating like "PG" AND length >= 120

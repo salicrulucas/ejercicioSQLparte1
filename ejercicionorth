@@ -1,0 +1,65 @@
+ejercicios and, or, not
+
+1- Obtener todos los productos con un precio = o superior a 10.0000 y la cantidad minima de pedido sea igual a 5
+
+SELECT list_price, minimum_reorder_quantity from products
+WHERE list_price >= 10.0000 AND minimum_reorder_quantity <= 5
+
+2-obtener todos los empleados que trabajan en la ciudad de seattle o que su puesto se a "Sales Representative"
+
+SELECT city, job_title from employees
+WHERE city = "Seattle" and job_title = "Sales Representative"
+
+3-Obtener todos los clientes que no esten en new york
+
+SELECT first_name, city FROM customers
+WHERE NOT city = "New York"
+
+4-Obtener todos los productos que el precio no sean de 29.2500
+
+SELECT product_name, list_price FROM products
+WHERE NOT list_price = 29.2500
+
+otra forma de usar el not , !=
+
+SELECT * FROM customers
+WHERE Country != "USA"
+
+SELECT * FROM products
+WHERE Price BETWEEN 20 and 40
+
+buscar entre fechas de nacimiento
+SELECT * FROM employees
+where birthdate between "1960-0-1" and "1970-0-1"
+order by birthdate
+
+e-operador like 
+2 comodines : % , _ 
+
+SELECT * FROM `employees`
+WHERE LastName like "full__"
+
+SELECT * FROM `employees`
+WHERE FirstName like "na___"
+
+ejercicios BETWEEN y like 
+
+1-Seleccionar todos los productos cuyos precios esten entre $10 y $20
+
+SELECT Price FROM products
+WHERE Price BETWEEN 10 and 20
+
+2-Seleccionar todos los empleados cuyo apellidos comiencen con d
+
+SELECT FirstName, LastName FROM employees
+WHERE LastName LIKE "%d"
+
+3-Seleccionar todos los empleados nacidos entre 1 de enero de 1960 y 31 de diciembre de 1965
+
+SELECT BirthDate FROM employees
+WHERE BirthDate BETWEEN "1960-1-1" AND "1970-12-31"
+
+4-Seleccionar todos los clientes cuyos nombres de contacto contengan la letra B
+
+SELECT ContactName FROM customers
+WHERE ContactName like "%b%"
