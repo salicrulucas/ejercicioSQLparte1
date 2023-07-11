@@ -60,3 +60,12 @@ GROUP BY ProductID
 HAVING TOTAL > 50
 ORDER BY TOTAL DESC
 limit 1
+
+resumen
+
+primero: SELECT
+segundo: filtrar los registros (where)
+tercero: agrupar registros
+cuarto: agrupar registros si y solo si hay una funcion de agrupacion y group by  (having)
+quinto: ordenamiento(order by)
+sexto: limitar (limit)
