@@ -23,3 +23,40 @@ SELECT MAX(length) as Maxduracion FROM film
 6 Pelicula con menor duracion
 
 SELECT MIN(length) as Minduracion FROM film
+
+sacar el promedio de los precios, pero agrupado por
+categorias, redondear y que no muestre los valores null
+
+SELECT SupplierID, CategoryID, AVG(Price) as promedio FROM products
+WHERE CategoryID is not null
+GROUP BY CategoryID
+
+having (cuando usamos promedios de agrupacion no podemos usar where, tenemos que usar having)
+
+
+
+SELECT SupplierID, CategoryID, AVG(Price) as promedio FROM products
+WHERE CategoryID is not null
+GROUP BY CategoryID
+HAVING promedio > 40
+
+producto que mas se vende 
+
+SELECT ProductID, SUM(Quantity) AS TOTAL FROM orderdetails
+GROUP BY ProductID
+ORDER BY TOTAL DESC
+
+La consulta me devuelva los productos que se vendieron mas de 50 veces 
+
+SELECT ProductID, SUM(Quantity) AS TOTAL FROM orderdetails
+GROUP BY ProductID
+HAVING TOTAL > 50
+ORDER BY TOTAL DESC
+
+La consulta me devuelva el producto mas vendido
+
+SELECT ProductID, SUM(Quantity) AS TOTAL FROM orderdetails
+GROUP BY ProductID
+HAVING TOTAL > 50
+ORDER BY TOTAL DESC
+limit 1
