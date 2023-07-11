@@ -1,0 +1,25 @@
+1¿cuantos actores hay?
+
+SELECT COUNT(*) AS numeroactores from actor
+
+2¿cuantos country hay que empiezan por a?
+
+SELECT COUNT(country) as CountryWithA FROM country
+WHERE country like "a%"
+
+3cual es el promedio de duracion de peliculas con pg
+
+SELECT AVG(length) as AVGLength FROM film
+WHERE rating = "PG"
+
+4suma de rental_date de todas las peliculas 
+
+SELECT SUM(rental_rate) FROM film
+
+5 Pelicula con mayor duracion
+
+SELECT MAX(length) as Maxduracion FROM film
+
+6 Pelicula con menor duracion
+
+SELECT MIN(length) as Minduracion FROM film
